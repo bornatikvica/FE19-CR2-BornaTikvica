@@ -85,10 +85,33 @@ for(let job of tasks){
 `;
 }
 let btns=document.getElementsByClassName('btnpr');
-for(let i in btns){
+let counters = Array.prototype.map.call(btns,function(){
+    return 0;
+});
+for(let i=0; i< btns.length; i++){
     btns[i].addEventListener("click",function(){
-        priority = 5;
-        tasks[i].priority++;
-        document.getElementsByClassName("btnpr")[i].innerHTML = tasks[i].priority;
-    })
+        if (counters[i]<5){
+            tasks[i].priority++;
+            document.getElementsByClassName("btnpr")[i].innerHTML= tasks[i].priority;
+            counters[i]++;
+            if(counters[i]=== 6){
+                btns[i].removeEventListener("click",handleClick);
+            }
+            changeColor(i);
+            
+        }
+       
+    });
+}
+
+function changeColor(index){
+    const changeElement = document.getElementsByClassName("btnpr")[index];
+    const changeValue= counters[index];
+    if ( changeValue ===2){
+        changeElement.classList.remove("bg-success");
+        changeElement.classList.add("bg-warning");
+    } else if (changeValue ===4){
+        changeElement.classList.remove("bg-warning");
+        changeElement.classList.add("bg-danger");
+    }
 }
