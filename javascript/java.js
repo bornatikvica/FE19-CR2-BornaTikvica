@@ -57,7 +57,7 @@ let tasks =[{
 
 for(let job of tasks){
     document.getElementById('cards').innerHTML += `
-    <div class="card shadow mb-3 bg-body-tertiary rounded">
+    <div class="card shadow mb-3 bg-body-tertiary rounded contenCard">
     <div class="top1">
         <button class="btn btn-primary">Task</button>
         <div class="card-container-top-right">
@@ -115,3 +115,4 @@ function changeColor(index){
         changeElement.classList.add("bg-danger");
     }
 }
+
