@@ -1,0 +1,115 @@
+#lft{
+    gap: 10px;
+}
+#nvimg{
+        filter: invert(100%);
+}
+.notification{
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+#ntfc{
+    background-color: red;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#fnt{
+    font-size: 15px;
+}
+.poster{
+    background-image: url('/images/apple-g188fe009d_1280.jpg');
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+
+    
+}
+.hover{
+    position: absolute;
+    background-color: black;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    opacity: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#text{margin-top: 36px;}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 70px 15px 70px;
+}
+.top1{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px 10px 0px;
+}
+.maincnt{
+    padding: 0px 50px 0px 50px;
+    
+}
+
+.card-body2{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+.footer{
+    background-color: black;
+}
+#ftt{
+    filter: invert(100%);
+    margin: 20px 0px 20px 0px;
+    border: 1px solid white;
+}
+.row1{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color: white;
+    
+    
+}
+#inpt{
+    width: 500px;
+}
+.btn1{
+    border: 1px solid white;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    transition: all .2s linear;
+}
+
+.row2{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+
+
