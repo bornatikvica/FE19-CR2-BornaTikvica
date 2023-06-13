@@ -77,8 +77,8 @@ for(let job of tasks){
     <p>Deadline: ${job.deadline} </p></li>
     </li>
   <div class="card-body2">
-  <a href="#" class="btn btn-danger">Delete</a>
-  <a href="#" class="btn btn-success">Done</a>
+  <a  class="btn btn-danger">Delete</a>
+  <a  class="btn btn-success">Done</a>
     
   </div>
 </div>
@@ -94,19 +94,16 @@ for(let i=0; i< btns.length; i++){
             tasks[i].priority++;
             document.getElementsByClassName("btnpr")[i].innerHTML= tasks[i].priority;
             counters[i]++;
-            if(counters[i]=== 6){
-                btns[i].removeEventListener("click",handleClick);
-            }
+        } 
             changeColor(i);
-            
-        }
+    
        
     });
 }
 
-function changeColor(index){
-    const changeElement = document.getElementsByClassName("btnpr")[index];
-    const changeValue= counters[index];
+function changeColor(i){
+    const changeElement = document.getElementsByClassName("btnpr")[i];
+    const changeValue= counters[i];
     if ( changeValue ===2){
         changeElement.classList.remove("bg-success");
         changeElement.classList.add("bg-warning");
@@ -116,3 +113,6 @@ function changeColor(index){
     }
 }
 
+//  if(counters[i]=== 5){
+//  btns[i].removeEventListener("click",handleClick);
+//}
